@@ -31,13 +31,12 @@ namespace GUI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lbTitle.Text = "Báo cáo";
+            lbTitle.Text = "Quản lý hóa đơn";
 
             pnMain.Controls.Clear();
-            ReportUC Report = new ReportUC();
-            pnMain.Controls.Add(Report);
-            //EmpUC.Dock = DockStyle.Fill;
-            Report.Show();
+            ManageBill mb = new ManageBill();
+            pnMain.Controls.Add(mb);
+            mb.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -64,6 +63,26 @@ namespace GUI.Forms
             InforCarUC InfUC = new InforCarUC();
             pnMain.Controls.Add(InfUC);
             InfUC.Show();
+        }
+
+        private void btnquanlyphat_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Quản lý vi phạm nộp phạt";
+
+            pnMain.Controls.Clear();
+            ManagePunish mgP = new ManagePunish();
+            pnMain.Controls.Add(mgP);
+            mgP.Show();
+        }
+
+        private void btnquanlyhoadon_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Quản lý hóa đơn";
+
+            pnMain.Controls.Clear();
+            ManageBill mb = new ManageBill();
+            pnMain.Controls.Add(mb);
+            mb.Show();
         }
     }
 }

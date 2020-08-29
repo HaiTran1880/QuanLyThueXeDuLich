@@ -62,7 +62,7 @@
             // btnLamMoi
             // 
             this.btnLamMoi.Location = new System.Drawing.Point(625, 284);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(5);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(102, 42);
             this.btnLamMoi.TabIndex = 90;
@@ -78,7 +78,7 @@
             "Địa chỉ",
             "Số CMND"});
             this.cbbTimKiemTheo.Location = new System.Drawing.Point(950, 292);
-            this.cbbTimKiemTheo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbbTimKiemTheo.Margin = new System.Windows.Forms.Padding(5);
             this.cbbTimKiemTheo.Name = "cbbTimKiemTheo";
             this.cbbTimKiemTheo.Size = new System.Drawing.Size(176, 29);
             this.cbbTimKiemTheo.TabIndex = 89;
@@ -98,7 +98,7 @@
             // txtTenKH
             // 
             this.txtTenKH.Location = new System.Drawing.Point(157, 180);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(236, 29);
             this.txtTenKH.TabIndex = 87;
@@ -118,9 +118,9 @@
             this.grGioiTinh.Controls.Add(this.rdbNu);
             this.grGioiTinh.Controls.Add(this.rdbNam);
             this.grGioiTinh.Location = new System.Drawing.Point(422, 145);
-            this.grGioiTinh.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.grGioiTinh.Margin = new System.Windows.Forms.Padding(5);
             this.grGioiTinh.Name = "grGioiTinh";
-            this.grGioiTinh.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.grGioiTinh.Padding = new System.Windows.Forms.Padding(5);
             this.grGioiTinh.Size = new System.Drawing.Size(382, 99);
             this.grGioiTinh.TabIndex = 80;
             this.grGioiTinh.TabStop = false;
@@ -130,7 +130,7 @@
             // 
             this.rdbNu.AutoSize = true;
             this.rdbNu.Location = new System.Drawing.Point(247, 39);
-            this.rdbNu.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rdbNu.Margin = new System.Windows.Forms.Padding(5);
             this.rdbNu.Name = "rdbNu";
             this.rdbNu.Size = new System.Drawing.Size(51, 25);
             this.rdbNu.TabIndex = 1;
@@ -142,7 +142,7 @@
             // 
             this.rdbNam.AutoSize = true;
             this.rdbNam.Location = new System.Drawing.Point(67, 39);
-            this.rdbNam.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rdbNam.Margin = new System.Windows.Forms.Padding(5);
             this.rdbNam.Name = "rdbNam";
             this.rdbNam.Size = new System.Drawing.Size(63, 25);
             this.rdbNam.TabIndex = 0;
@@ -153,7 +153,7 @@
             // txtSDTKH
             // 
             this.txtSDTKH.Location = new System.Drawing.Point(980, 75);
-            this.txtSDTKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSDTKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(251, 29);
             this.txtSDTKH.TabIndex = 77;
@@ -171,7 +171,7 @@
             // txtSoCMNDKH
             // 
             this.txtSoCMNDKH.Location = new System.Drawing.Point(560, 75);
-            this.txtSoCMNDKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSoCMNDKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtSoCMNDKH.Name = "txtSoCMNDKH";
             this.txtSoCMNDKH.Size = new System.Drawing.Size(241, 29);
             this.txtSoCMNDKH.TabIndex = 78;
@@ -189,7 +189,7 @@
             // txtMaKH
             // 
             this.txtMaKH.Location = new System.Drawing.Point(157, 74);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(236, 29);
             this.txtMaKH.TabIndex = 79;
@@ -207,7 +207,7 @@
             // btnSuaKH
             // 
             this.btnSuaKH.Location = new System.Drawing.Point(250, 284);
-            this.btnSuaKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSuaKH.Margin = new System.Windows.Forms.Padding(5);
             this.btnSuaKH.Name = "btnSuaKH";
             this.btnSuaKH.Size = new System.Drawing.Size(108, 40);
             this.btnSuaKH.TabIndex = 83;
@@ -218,7 +218,7 @@
             // btnThemKH
             // 
             this.btnThemKH.Location = new System.Drawing.Point(62, 283);
-            this.btnThemKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnThemKH.Margin = new System.Windows.Forms.Padding(5);
             this.btnThemKH.Name = "btnThemKH";
             this.btnThemKH.Size = new System.Drawing.Size(108, 40);
             this.btnThemKH.TabIndex = 82;
@@ -229,7 +229,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(980, 184);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(251, 29);
             this.txtDiaChi.TabIndex = 76;
@@ -237,7 +237,7 @@
             // btnTimKiemKH
             // 
             this.btnTimKiemKH.Location = new System.Drawing.Point(795, 286);
-            this.btnTimKiemKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnTimKiemKH.Margin = new System.Windows.Forms.Padding(5);
             this.btnTimKiemKH.Name = "btnTimKiemKH";
             this.btnTimKiemKH.Size = new System.Drawing.Size(108, 40);
             this.btnTimKiemKH.TabIndex = 85;
@@ -248,7 +248,7 @@
             // btnXoaKH
             // 
             this.btnXoaKH.Location = new System.Drawing.Point(445, 284);
-            this.btnXoaKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnXoaKH.Margin = new System.Windows.Forms.Padding(5);
             this.btnXoaKH.Name = "btnXoaKH";
             this.btnXoaKH.Size = new System.Drawing.Size(108, 40);
             this.btnXoaKH.TabIndex = 84;
@@ -277,7 +277,7 @@
             this.SDT,
             this.DiaChi});
             this.dgvKhachHang.Location = new System.Drawing.Point(5, 342);
-            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(5);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(1224, 350);
             this.dgvKhachHang.TabIndex = 81;
@@ -343,7 +343,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvKhachHang);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CustomersUC";
             this.Size = new System.Drawing.Size(1234, 697);
             this.grGioiTinh.ResumeLayout(false);

@@ -193,6 +193,12 @@
     <Compile Include="UserControls\CustomersUC.Designer.cs">
       <DependentUpon>CustomersUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ManagePunish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManagePunish.Designer.cs">
+      <DependentUpon>ManagePunish.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\EmployeeUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +210,12 @@
     </Compile>
     <Compile Include="UserControls\InforCarUC.Designer.cs">
       <DependentUpon>InforCarUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManageBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManageBill.Designer.cs">
+      <DependentUpon>ManageBill.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ReportUC.cs">
       <SubType>UserControl</SubType>
@@ -230,11 +242,17 @@
     <EmbeddedResource Include="UserControls\CustomersUC.resx">
       <DependentUpon>CustomersUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ManagePunish.resx">
+      <DependentUpon>ManagePunish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\EmployeeUC.resx">
       <DependentUpon>EmployeeUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\InforCarUC.resx">
       <DependentUpon>InforCarUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ManageBill.resx">
+      <DependentUpon>ManageBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ReportUC.resx">
       <DependentUpon>ReportUC.cs</DependentUpon>
