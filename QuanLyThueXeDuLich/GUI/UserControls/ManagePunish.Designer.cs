@@ -79,6 +79,7 @@
             this.dgvphat.Name = "dgvphat";
             this.dgvphat.Size = new System.Drawing.Size(1224, 293);
             this.dgvphat.TabIndex = 1;
+            this.dgvphat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvphat_CellClick);
             // 
             // stt
             // 
@@ -248,6 +249,7 @@
             this.btnrefesh.TabIndex = 28;
             this.btnrefesh.Text = "Làm mới";
             this.btnrefesh.UseVisualStyleBackColor = true;
+            this.btnrefesh.Click += new System.EventHandler(this.ManagePunish_Load);
             // 
             // btntimphieu
             // 
@@ -257,6 +259,7 @@
             this.btntimphieu.TabIndex = 23;
             this.btntimphieu.Text = "Tìm kiếm";
             this.btntimphieu.UseVisualStyleBackColor = true;
+            this.btntimphieu.Click += new System.EventHandler(this.btntimphieu_Click);
             // 
             // btnxoaphieu
             // 
@@ -266,6 +269,7 @@
             this.btnxoaphieu.TabIndex = 24;
             this.btnxoaphieu.Text = "Xóa";
             this.btnxoaphieu.UseVisualStyleBackColor = true;
+            this.btnxoaphieu.Click += new System.EventHandler(this.btnxoaphieu_Click);
             // 
             // btnsuaphieu
             // 
@@ -275,6 +279,7 @@
             this.btnsuaphieu.TabIndex = 25;
             this.btnsuaphieu.Text = "Sửa";
             this.btnsuaphieu.UseVisualStyleBackColor = true;
+            this.btnsuaphieu.Click += new System.EventHandler(this.btnsuaphieu_Click);
             // 
             // btnlammoi
             // 
@@ -284,6 +289,7 @@
             this.btnlammoi.TabIndex = 26;
             this.btnlammoi.Text = "Nhập lại";
             this.btnlammoi.UseVisualStyleBackColor = true;
+            this.btnlammoi.Click += new System.EventHandler(this.btnrefesh_Click);
             // 
             // btnthemphieu
             // 
@@ -293,6 +299,7 @@
             this.btnthemphieu.TabIndex = 27;
             this.btnthemphieu.Text = "Thêm";
             this.btnthemphieu.UseVisualStyleBackColor = true;
+            this.btnthemphieu.Click += new System.EventHandler(this.btnthemphieu_Click);
             // 
             // txttimkiemphieu
             // 
@@ -338,7 +345,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvphat);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ManagePunish";
             this.Size = new System.Drawing.Size(1234, 697);
             ((System.ComponentModel.ISupportInitialize)(this.dgvphat)).EndInit();

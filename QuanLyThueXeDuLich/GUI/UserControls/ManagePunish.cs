@@ -13,53 +13,61 @@ namespace GUI.UserControls
 {
     public partial class ManagePunish : UserControl
     {
-        String connstring = @"Data Source=HOANGUYEN;Initial Catalog=QLXeDuLich;Integrated Security=True";
+        String connstring = @"Data Source=DESKTOP-3KKJ8H8\SLQ2019;Initial Catalog=QLXeDuLich;Integrated Security=True";
         SqlConnection conn = new SqlConnection();
 
         private void LoadData()
         {
-            conn = new SqlConnection(connstring);
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from Punish", conn);
-
-            SqlDataAdapter ad1 = new SqlDataAdapter("Select ID From Customers", conn);
-            DataTable cmbKH = new DataTable();
-            ad1.Fill(cmbKH);
-            cmbmakh.DataSource = cmbKH;
-            cmbmakh.DisplayMember = "ID";
-            cmbmakh.ValueMember = "ID";
-
-            SqlDataAdapter ad2 = new SqlDataAdapter("Select ID From Employee", conn);
-            DataTable cmbNV = new DataTable();
-            ad2.Fill(cmbNV);
-            cmbmanv.DataSource = cmbNV;
-            cmbmanv.DisplayMember = "ID";
-            cmbmanv.ValueMember = "ID";
-
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            int index = 0;
-            dgvphat.ColumnCount = 8;
-            dgvphat.Rows.Clear();
-            while (dr.Read())
+            try
             {
-                dgvphat.Rows.Add();
-                dgvphat.Rows[index].Cells[0].Value = index + 1;
-                dgvphat.Rows[index].Cells[1].Value = dr["ID"];
-                dgvphat.Rows[index].Cells[2].Value = dr["BillsID"];
-                dgvphat.Rows[index].Cells[4].Value = dr["CustomerID"];
-                dgvphat.Rows[index].Cells[3].Value = dr["EmpID"];
-                dgvphat.Rows[index].Cells[5].Value = dr["Description"];
-                dgvphat.Rows[index].Cells[7].Value = Convert.ToDateTime(dr["Date"]).ToString("dd-MM-yyyy");
-                dgvphat.Rows[index].Cells[6].Value = dr["Price"];
+                conn = new SqlConnection(connstring);
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand("Select * from Punish", conn);
 
-                index++;
+                SqlDataAdapter ad1 = new SqlDataAdapter("Select ID From Customers", conn);
+                DataTable cmbKH = new DataTable();
+                ad1.Fill(cmbKH);
+                cmbmakh.DataSource = cmbKH;
+                cmbmakh.DisplayMember = "ID";
+                cmbmakh.ValueMember = "ID";
+
+                SqlDataAdapter ad2 = new SqlDataAdapter("Select ID From Employee", conn);
+                DataTable cmbNV = new DataTable();
+                ad2.Fill(cmbNV);
+                cmbmanv.DataSource = cmbNV;
+                cmbmanv.DisplayMember = "ID";
+                cmbmanv.ValueMember = "ID";
+
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                int index = 0;
+                dgvphat.ColumnCount = 8;
+                dgvphat.Rows.Clear();
+                while (dr.Read())
+                {
+                    dgvphat.Rows.Add();
+                    dgvphat.Rows[index].Cells[0].Value = index + 1;
+                    dgvphat.Rows[index].Cells[1].Value = dr["ID"];
+                    dgvphat.Rows[index].Cells[2].Value = dr["BillsID"];
+                    dgvphat.Rows[index].Cells[4].Value = dr["CustomerID"];
+                    dgvphat.Rows[index].Cells[3].Value = dr["EmpID"];
+                    dgvphat.Rows[index].Cells[5].Value = dr["Description"];
+                    dgvphat.Rows[index].Cells[7].Value = dr["Date"];
+                    dgvphat.Rows[index].Cells[6].Value = dr["Price"];
+
+                    index++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public ManagePunish()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void SetNull()
@@ -98,6 +106,7 @@ namespace GUI.UserControls
                         conn.Open();
                     SqlCommand cmd = new SqlCommand("Delete from Punish Where ID='" + txtmaphieu.Text + "'", conn);
                     cmd.ExecuteNonQuery();
+
                     LoadData();
                     SetNull();
                 }
@@ -120,7 +129,7 @@ namespace GUI.UserControls
             cmbmakh.Text = Convert.ToString(row.Cells[4].Value);
             txtmota.Text = Convert.ToString(row.Cells[5].Value);
             txttienphat.Text = Convert.ToString(row.Cells[6].Value);
-            datephieuphat.Value = DateTime.Parse(row.Cells[7].Value.ToString());
+            datephieuphat.Text = Convert.ToString(row.Cells[7].Value);
 
         }
 
@@ -142,7 +151,7 @@ namespace GUI.UserControls
                 cmd.Parameters.AddWithValue("@MON", Int32.Parse(txttienphat.Text));
 
                 cmd.ExecuteNonQuery();
-
+                
                 if (conn.State == ConnectionState.Open)
                     conn.Close();
 
@@ -214,7 +223,7 @@ namespace GUI.UserControls
                     dgvphat.Rows[index].Cells[4].Value = dr["CustomerID"];
                     dgvphat.Rows[index].Cells[3].Value = dr["EmpID"];
                     dgvphat.Rows[index].Cells[5].Value = dr["Description"];
-                    dgvphat.Rows[index].Cells[7].Value = Convert.ToDateTime(dr["Date"]).ToString("dd-MM-yyyy");
+                    dgvphat.Rows[index].Cells[7].Value = dr["Date"];
                     dgvphat.Rows[index].Cells[6].Value = dr["Price"];
 
                     index++;
@@ -232,5 +241,6 @@ namespace GUI.UserControls
             LoadData();
             SetNull();
         }
+
     }
 }

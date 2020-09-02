@@ -37,7 +37,7 @@ namespace GUI.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var Acc = txtAccount.Text.ToLower();
+            /*var Acc = txtAccount.Text.ToLower();
             var PW = txtPassword.Text.ToLower();
             var _pw = Security.Encrypt(PW);
 
@@ -53,7 +53,9 @@ namespace GUI.Forms
             else
             {
                 MessageBox.Show("Thông tin tài khoản hoặc mật khẩu không chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            }*/
+            new MainForm().Visible = true;
+            this.Visible = false;
         }
     }
 }

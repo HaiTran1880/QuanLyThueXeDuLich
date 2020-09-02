@@ -44,7 +44,6 @@
             this.btntimkiemhoadon = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.bthhuy = new System.Windows.Forms.Button();
             this.btnchitiethd = new System.Windows.Forms.Button();
             this.btnnhaplai = new System.Windows.Forms.Button();
             this.txttimkiemhoadon = new System.Windows.Forms.TextBox();
@@ -63,7 +62,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNameEmp = new System.Windows.Forms.TextBox();
             this.cmbmaxe = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mahd = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +71,8 @@
             this.ngaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maxe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tienthue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnrefesh_hd = new System.Windows.Forms.Button();
+            this.txtNameEmp = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvchitiethoadon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvhoadon)).BeginInit();
             this.SuspendLayout();
@@ -182,7 +182,7 @@
             // 
             // btntimkiemhoadon
             // 
-            this.btntimkiemhoadon.Location = new System.Drawing.Point(405, 364);
+            this.btntimkiemhoadon.Location = new System.Drawing.Point(408, 364);
             this.btntimkiemhoadon.Name = "btntimkiemhoadon";
             this.btntimkiemhoadon.Size = new System.Drawing.Size(124, 39);
             this.btntimkiemhoadon.TabIndex = 16;
@@ -193,7 +193,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(554, 396);
+            this.label9.Location = new System.Drawing.Point(546, 396);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(222, 21);
             this.label9.TabIndex = 15;
@@ -209,15 +209,6 @@
             this.label6.Size = new System.Drawing.Size(218, 23);
             this.label6.TabIndex = 14;
             this.label6.Text = "Thông tin chi tiết dịch vụ";
-            // 
-            // bthhuy
-            // 
-            this.bthhuy.Location = new System.Drawing.Point(290, 364);
-            this.bthhuy.Name = "bthhuy";
-            this.bthhuy.Size = new System.Drawing.Size(104, 39);
-            this.bthhuy.TabIndex = 11;
-            this.bthhuy.Text = "Hủy";
-            this.bthhuy.UseVisualStyleBackColor = true;
             // 
             // btnchitiethd
             // 
@@ -241,7 +232,7 @@
             // 
             // txttimkiemhoadon
             // 
-            this.txttimkiemhoadon.Location = new System.Drawing.Point(546, 364);
+            this.txttimkiemhoadon.Location = new System.Drawing.Point(538, 364);
             this.txttimkiemhoadon.Name = "txttimkiemhoadon";
             this.txttimkiemhoadon.Size = new System.Drawing.Size(488, 29);
             this.txttimkiemhoadon.TabIndex = 10;
@@ -380,15 +371,6 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Mã Hóa Đơn";
             // 
-            // txtNameEmp
-            // 
-            this.txtNameEmp.Enabled = false;
-            this.txtNameEmp.Location = new System.Drawing.Point(202, 109);
-            this.txtNameEmp.Multiline = true;
-            this.txtNameEmp.Name = "txtNameEmp";
-            this.txtNameEmp.Size = new System.Drawing.Size(199, 28);
-            this.txtNameEmp.TabIndex = 34;
-            // 
             // cmbmaxe
             // 
             this.cmbmaxe.FormattingEnabled = true;
@@ -399,66 +381,79 @@
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "STT";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
             // 
             // mahd
             // 
-            this.mahd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mahd.DataPropertyName = "ID";
             this.mahd.HeaderText = "Mã hóa đơn";
             this.mahd.Name = "mahd";
+            this.mahd.Width = 70;
             // 
             // CustomerName
             // 
-            this.CustomerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.CustomerName.DataPropertyName = "CustomerName";
             this.CustomerName.HeaderText = "Tên khách hàng";
             this.CustomerName.Name = "CustomerName";
             // 
             // manv
             // 
-            this.manv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.manv.DataPropertyName = "EmpName";
             this.manv.HeaderText = "Tên nhân viên";
             this.manv.Name = "manv";
             // 
             // ngaythue
             // 
-            this.ngaythue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ngaythue.DataPropertyName = "DateOfHire";
             this.ngaythue.HeaderText = "Ngày thuê";
             this.ngaythue.Name = "ngaythue";
             // 
             // ngaytra
             // 
-            this.ngaytra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ngaytra.DataPropertyName = "DateOfPayment";
             this.ngaytra.HeaderText = "Ngày trả";
             this.ngaytra.Name = "ngaytra";
             // 
             // maxe
             // 
-            this.maxe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.maxe.DataPropertyName = "CarName";
             this.maxe.HeaderText = "Tên xe";
             this.maxe.Name = "maxe";
             // 
             // tienthue
             // 
-            this.tienthue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tienthue.DataPropertyName = "PricePerDay";
             this.tienthue.HeaderText = "Đơn giá/Ngày";
             this.tienthue.Name = "tienthue";
+            // 
+            // btnrefesh_hd
+            // 
+            this.btnrefesh_hd.Location = new System.Drawing.Point(291, 364);
+            this.btnrefesh_hd.Name = "btnrefesh_hd";
+            this.btnrefesh_hd.Size = new System.Drawing.Size(104, 38);
+            this.btnrefesh_hd.TabIndex = 36;
+            this.btnrefesh_hd.Text = "Làm mới";
+            this.btnrefesh_hd.UseVisualStyleBackColor = true;
+            this.btnrefesh_hd.Click += new System.EventHandler(this.btnrefesh_hd_Click);
+            // 
+            // txtNameEmp
+            // 
+            this.txtNameEmp.Enabled = false;
+            this.txtNameEmp.Location = new System.Drawing.Point(203, 108);
+            this.txtNameEmp.Name = "txtNameEmp";
+            this.txtNameEmp.Size = new System.Drawing.Size(197, 29);
+            this.txtNameEmp.TabIndex = 37;
             // 
             // ManageBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cmbmaxe);
             this.Controls.Add(this.txtNameEmp);
+            this.Controls.Add(this.btnrefesh_hd);
+            this.Controls.Add(this.cmbmaxe);
             this.Controls.Add(this.datetimethuexe);
             this.Controls.Add(this.datetimetraxe);
             this.Controls.Add(this.cmbmakh);
@@ -477,7 +472,6 @@
             this.Controls.Add(this.btntimkiemhoadon);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.bthhuy);
             this.Controls.Add(this.btnchitiethd);
             this.Controls.Add(this.btnnhaplai);
             this.Controls.Add(this.txttimkiemhoadon);
@@ -513,7 +507,6 @@
         private System.Windows.Forms.Button btntimkiemhoadon;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button bthhuy;
         private System.Windows.Forms.Button btnchitiethd;
         private System.Windows.Forms.Button btnnhaplai;
         private System.Windows.Forms.TextBox txttimkiemhoadon;
@@ -532,7 +525,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNameEmp;
         private System.Windows.Forms.ComboBox cmbmaxe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahd;
@@ -542,5 +534,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaytra;
         private System.Windows.Forms.DataGridViewTextBoxColumn maxe;
         private System.Windows.Forms.DataGridViewTextBoxColumn tienthue;
+        private System.Windows.Forms.Button btnrefesh_hd;
+        private System.Windows.Forms.TextBox txtNameEmp;
     }
 }
